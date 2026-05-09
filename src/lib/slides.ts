@@ -6,19 +6,20 @@ export type MemorySlide = {
   caption: string
 }
 
-const placeholderImage = '/darkroom-photo/DSC07920.JPG'
+const darkroomAssetBase = `${import.meta.env.BASE_URL}darkroom-photo/`
+const placeholderImage = `${darkroomAssetBase}DSC07920.JPG`
 
 export const slides: MemorySlide[] = [
   {
     id: 'slide-1',
-    imageSrc: '/darkroom-photo/slide-1.jpg',
+    imageSrc: `${darkroomAssetBase}slide-1.jpg`,
     note: 'Mừng ngày kỉ niệm 18 tháng của mình...',
     doodle: '25/04/26',
     caption: 'Tặng người thương của anh',
   },
   {
     id: 'slide-2',
-    imageSrc: '/darkroom-photo/slide-2.jpg',
+    imageSrc: `${darkroomAssetBase}slide-2.jpg`,
     note: 'anh mong em sẽ luôn nhớ là...',
     doodle: '29/04/26',
     caption: 'vì em đã cho anh 18 tháng',
