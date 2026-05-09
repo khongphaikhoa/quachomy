@@ -11,7 +11,7 @@ type Props = {
 
 const BASE_WIDTH = 960
 const BASE_HEIGHT = 600
-const COMPLETE_THRESHOLD = 0.53
+const COMPLETE_THRESHOLD = 0.477
 
 export function DarkroomCanvas({ slide, slideNumber, totalSlides, onComplete }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -74,7 +74,7 @@ export function DarkroomCanvas({ slide, slideNumber, totalSlides, onComplete }: 
           dt,
         },
         90,
-        2.9
+        3.19
       )
 
       engine.toImageData(revealMap)
