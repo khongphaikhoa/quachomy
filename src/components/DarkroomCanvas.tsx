@@ -11,7 +11,7 @@ type Props = {
 
 const BASE_WIDTH = 960
 const BASE_HEIGHT = 600
-const COMPLETE_THRESHOLD = 0.477
+const COMPLETE_THRESHOLD = 0.4
 
 export function DarkroomCanvas({ slide, slideNumber, totalSlides, onComplete }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -64,8 +64,8 @@ export function DarkroomCanvas({ slide, slideNumber, totalSlides, onComplete }: 
 
       const jitterX = (Math.random() - 0.5) * 0.9
       const jitterY = (Math.random() - 0.5) * 0.9
-      easedPointerRef.current.x += (pointerRef.current.x - easedPointerRef.current.x) * 0.12 + jitterX
-      easedPointerRef.current.y += (pointerRef.current.y - easedPointerRef.current.y) * 0.12 + jitterY
+      easedPointerRef.current.x += (pointerRef.current.x - easedPointerRef.current.x) * 0.15 + jitterX
+      easedPointerRef.current.y += (pointerRef.current.y - easedPointerRef.current.y) * 0.15 + jitterY
 
       engine.applyBrush(
         {
@@ -74,7 +74,7 @@ export function DarkroomCanvas({ slide, slideNumber, totalSlides, onComplete }: 
           dt,
         },
         90,
-        3.19
+        3.5
       )
 
       engine.toImageData(revealMap)
